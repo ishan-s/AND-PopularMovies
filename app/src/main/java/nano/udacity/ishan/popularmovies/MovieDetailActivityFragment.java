@@ -28,7 +28,8 @@ import nano.udacity.ishan.popularmovies.common.Const;
 import nano.udacity.ishan.popularmovies.data.Movie;
 
 /**
- * A placeholder fragment containing a simple view.
+ * Fragment for MovieDetailActivity - displays movie information and posters etc selected
+ * from the main activity.
  */
 public class MovieDetailActivityFragment extends Fragment implements View.OnClickListener {
 

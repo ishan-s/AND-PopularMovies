@@ -36,7 +36,7 @@ import nano.udacity.ishan.popularmovies.common.Const;
 import nano.udacity.ishan.popularmovies.data.Movie;
 
 /**
- * A placeholder fragment containing a simple view.
+ * Fragment holding the GridView of movie poster images.
  */
 public class MainActivityFragment extends Fragment {
 
