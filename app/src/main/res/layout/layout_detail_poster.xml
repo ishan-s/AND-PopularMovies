@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/movie_poster_large_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:src="@drawable/placeholder_w185" />
+
+    <TableLayout
+        android:id="@+id/stats_tableview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/movie_poster_large_imageview"
+        android:paddingLeft="12dp">
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/rating_ic_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_user_rating" />
+
+            <TextView
+                android:id="@+id/movie_userrating_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/stats_textsize"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Way to draw a separator - borrowed from some stackoverflow answer I don't have the reference to now! -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/duration_ic_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_duration" />
+
+            <!-- TODO: Display the actual movie duration. Hardcoding to 120mins for now -->
+            <TextView
+                android:id="@+id/movie_duration_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="120 Min"
+                android:textSize="@dimen/stats_textsize"
+                android:textStyle="bold" />
+
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+    </TableLayout>
+    <Button
+        android:id="@+id/favorite_button"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:background="#FFB300"
+        android:text="@string/favorite_button_text"
+        android:layout_alignBottom="@+id/movie_poster_large_imageview"
+        android:layout_alignLeft="@+id/stats_tableview"
+        android:layout_alignStart="@+id/stats_tableview"
+        android:layout_marginLeft="12dp"/>
+</RelativeLayout>
